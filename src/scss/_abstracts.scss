@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+// COLOR
+$clr-very-dark-blue: #0a192f;
+$clr-mid-dark-blue: #112240;
+$clr-dark-blue: #233554;
+$clr-light-blue: #8892b0;
+$clr-mid-light-blue: #a8b2d1;
+$clr-very-light-blue: #ccd6f6;
+$clr-white: #e6f1ff;
+$clr-very-light-green: #64ffda;
+
+// FONT-FAMILT
+$ff-fira-code: "Fira Code", sans-serif;
+$ff-inter: "Inter", sans-serif;
+
+// FONT-WEIGHT
+$fw-tiny: 400;
+$fw-small: 500;
+$fw-medium: 600;
+$fw-large: 700;
+$fw-xlarge: 800;
+
+// MIXIN
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin transitionAll {
+	transition: all 0.2s;
+}
+
+// FUNCTION
+@function toRem($size) {
+	$remSize: calc($size / 16px);
+	@return #{$remSize}rem;
+}

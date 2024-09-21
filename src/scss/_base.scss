@@ -1,3 +1,5 @@
+@use "./abstracts" as abs;
+
 *,
 *::before,
 *::after {
@@ -7,5 +9,143 @@
 }
 
 body {
-	background-color: red;
+	font-family: abs.$ff-inter;
+	background-color: abs.$clr-very-dark-blue;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+// NAVIGATION
+.navigation {
+	height: abs.toRem(100px);
+	background-color: abs.$clr-very-dark-blue;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 abs.toRem(50px);
+
+	&_logo:link,
+	&_logo:visited {
+		color: abs.$clr-very-light-green;
+		font-size: abs.toRem(30px);
+		letter-spacing: abs.toRem(-1px);
+	}
+
+	&_list {
+		font-family: abs.$ff-fira-code;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 25px;
+	}
+
+	&_item {
+		& span {
+			font-family: abs.$ff-fira-code;
+			color: abs.$clr-very-light-green;
+			margin-right: 5px;
+		}
+
+		& a {
+			color: abs.$clr-mid-light-blue;
+		}
+	}
+}
+
+// INTRODUCTION
+.header {
+	max-width: abs.toRem(1000px);
+	margin: 0 auto;
+	padding: abs.toRem(50px) 0;
+
+	&_primary {
+		font-size: abs.toRem(16px);
+		color: abs.$clr-very-light-green;
+		font-family: abs.$ff-fira-code;
+		font-weight: abs.$fw-tiny;
+		margin-bottom: 5px;
+	}
+
+	&_secondary,
+	&_tertiary {
+		font-size: abs.toRem(80px);
+		font-weight: abs.$fw-large;
+	}
+
+	&_secondary {
+		color: abs.$clr-very-light-blue;
+	}
+
+	&_tertiary {
+		color: abs.$clr-light-blue;
+		margin-bottom: abs.toRem(15px);
+	}
+
+	&_description {
+		color: abs.$clr-light-blue;
+		font-size: abs.toRem(20px);
+		width: abs.toRem(520px);
+		margin-bottom: abs.toRem(30px);
+	}
+
+	&_button {
+		cursor: pointer;
+		outline: none;
+		border: 1px solid abs.$clr-very-light-green;
+		border-radius: abs.toRem(5px);
+		color: abs.$clr-very-light-green;
+		background: none;
+		font-size: abs.toRem(18px);
+		font-family: abs.$ff-fira-code;
+		padding: abs.toRem(14px) abs.toRem(20px);
+		@include abs.transitionAll;
+
+		&:hover {
+			box-shadow: 4px 4px 0 abs.$clr-very-light-green;
+			transform: translate(-5px, -5px);
+		}
+	}
+}
+
+// PAGE INTRO
+.pageIntro {
+	display: flex;
+	align-items: center;
+
+	&_number {
+		font-family: abs.$ff-fira-code;
+		color: abs.$clr-very-light-green;
+		font-size: abs.toRem(20px);
+		margin-right: 10px;
+	}
+
+	&_title {
+		font-size: abs.toRem(32px);
+		color: abs.$clr-very-light-blue;
+		font-weight: abs.$fw-medium;
+		margin-right: abs.toRem(20px);
+	}
+
+	&_rec {
+		height: 1px;
+		width: abs.toRem(300px);
+		background-color: abs.$clr-dark-blue;
+	}
+}
+
+// ABOUT SECTION
+.about {
+	max-width: abs.toRem(1000px);
+	margin: 0 auto;
+	padding: abs.toRem(250px) 0;
 }

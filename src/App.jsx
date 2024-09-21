@@ -1,5 +1,7 @@
+import AppLayout from "./pages/AppLayout";
+
 function App() {
-	return <h1>hello world goodbye</h1>;
+	return <AppLayout />;
 }
 
 export default App;
