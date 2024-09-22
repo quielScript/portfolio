@@ -4,6 +4,7 @@ import Education from "./Education";
 import Intro from "./Intro";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
+import Projects from "./Projects";
 
 function AppLayout() {
 	return (
@@ -14,6 +15,7 @@ function AppLayout() {
 			<Education />
 			<Experience />
 			<Certifications />
+			<Projects />
 		</>
 	);
 }

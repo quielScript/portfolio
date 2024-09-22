@@ -494,3 +494,101 @@ a:visited {
 		margin-right: abs.toRem(-40px);
 	}
 }
+
+// PRPOJECTS
+.projects {
+	max-width: abs.toRem(1000px);
+	margin: 0 auto;
+	padding-bottom: abs.toRem(250px);
+
+	&_container {
+		margin-top: abs.toRem(30px);
+	}
+}
+
+.project {
+	&_item {
+		display: flex;
+		align-items: center;
+	}
+
+	&_img {
+		width: abs.toRem(650px);
+		height: abs.toRem(310px);
+		border-radius: abs.toRem(4px);
+
+		&-link {
+			margin-right: abs.toRem(-66px);
+		}
+	}
+
+	&_info {
+		text-align: right;
+	}
+
+	&_tag {
+		font-family: abs.$ff-fira-code;
+		font-size: abs.toRem(14px);
+		color: abs.$clr-very-light-green;
+		margin-bottom: abs.toRem(5px);
+	}
+
+	&_title {
+		margin-bottom: abs.toRem(20px);
+
+		& a {
+			color: abs.$clr-very-light-blue;
+			font-weight: abs.$fw-medium;
+			font-size: abs.toRem(28px);
+			@include abs.transitionAll;
+
+			&:hover {
+				color: abs.$clr-very-light-green;
+			}
+		}
+	}
+
+	&_description-container {
+		@include abs.boxShadow;
+		width: abs.toRem(500px);
+		height: fit-content;
+		background-color: abs.$clr-mid-dark-blue;
+		padding: abs.toRem(30px);
+		font-size: abs.toRem(18px);
+		color: abs.$clr-light-blue;
+		line-height: abs.toRem(25px);
+		border-radius: abs.toRem(4px);
+		margin-bottom: abs.toRem(30px);
+
+		& a {
+			color: abs.$clr-very-light-green;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 1px;
+				background-color: abs.$clr-very-light-green;
+				transition: width 0.5s ease;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+
+	&_tech {
+		list-style: none;
+		color: abs.$clr-mid-light-blue;
+		font-size: abs.toRem(14px);
+		font-family: abs.$ff-fira-code;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: abs.toRem(20px);
+	}
+}
