@@ -1,5 +1,6 @@
 import Navigation from "../components/Navigation";
 import About from "./About";
+import Education from "./Education";
 import Intro from "./Intro";
 
 function AppLayout() {
@@ -8,6 +9,7 @@ function AppLayout() {
 			<Navigation />
 			<Intro />
 			<About />
+			<Education />
 		</>
 	);
 }
