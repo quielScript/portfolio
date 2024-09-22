@@ -29,7 +29,11 @@ $fw-xlarge: 800;
 }
 
 @mixin transitionAll {
-	transition: all 0.2s;
+	transition: all 0.3s;
+}
+
+@mixin boxShadow {
+	box-shadow: 0 toRem(10px) toRem(30px) toRem(-15px) rgba(2, 12, 27, 0.7);
 }
 
 // FUNCTION

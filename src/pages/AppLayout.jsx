@@ -2,6 +2,8 @@ import Navigation from "../components/Navigation";
 import About from "./About";
 import Education from "./Education";
 import Intro from "./Intro";
+import Experience from "./Experience";
+import Certifications from "./Certifications";
 
 function AppLayout() {
 	return (
@@ -10,6 +12,8 @@ function AppLayout() {
 			<Intro />
 			<About />
 			<Education />
+			<Experience />
+			<Certifications />
 		</>
 	);
 }

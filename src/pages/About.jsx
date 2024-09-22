@@ -16,7 +16,7 @@ function About() {
 						</p>
 						<p>
 							I am currently studying Bachelor of Science in Information
-							Technology (BSIT) in the
+							Technology (BSIT) in the{" "}
 							<a href="https://umindanao.edu.ph/" target="_blank">
 								University of Mindanao
 							</a>
