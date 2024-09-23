@@ -51,14 +51,14 @@ a:visited {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		gap: 25px;
+		gap: abs.toRem(25px);
 	}
 
 	&_item {
 		& span {
 			font-family: abs.$ff-fira-code;
 			color: abs.$clr-very-light-green;
-			margin-right: 5px;
+			margin-right: abs.toRem(5px);
 		}
 
 		& a {
@@ -83,7 +83,7 @@ a:visited {
 		color: abs.$clr-very-light-green;
 		font-family: abs.$ff-fira-code;
 		font-weight: abs.$fw-tiny;
-		margin-bottom: 5px;
+		margin-bottom: abs.toRem(5px);
 	}
 
 	&_secondary,
@@ -121,7 +121,7 @@ a:visited {
 		@include abs.transitionAll;
 
 		&:hover {
-			box-shadow: 4px 4px 0 abs.$clr-very-light-green;
+			box-shadow: abs.toRem(4px) abs.toRem(4px) 0 abs.$clr-very-light-green;
 			transform: translate(-5px, -5px);
 		}
 	}
@@ -136,7 +136,7 @@ a:visited {
 		font-family: abs.$ff-fira-code;
 		color: abs.$clr-very-light-green;
 		font-size: abs.toRem(20px);
-		margin-right: 10px;
+		margin-right: abs.toRem(10px);
 	}
 
 	&_title {
@@ -396,11 +396,11 @@ a:visited {
 		flex-direction: column;
 		justify-content: space-between;
 		text-align: right;
-		padding-right: 50px;
+		padding-right: abs.toRem(50px);
 	}
 
 	&_list-mid {
-		width: 5px;
+		width: abs.toRem(5px);
 		height: abs.toRem(160px);
 		list-style: none;
 		background-color: abs.$clr-light-blue;
@@ -432,7 +432,7 @@ a:visited {
 		flex-direction: column;
 		justify-content: space-between;
 		text-align: left;
-		padding-left: 50px;
+		padding-left: abs.toRem(50px);
 	}
 }
 
@@ -444,42 +444,47 @@ a:visited {
 
 	&_container {
 		margin-top: abs.toRem(30px);
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(abs.toRem(400px), 1fr));
-		grid-auto-rows: 1fr;
-		gap: abs.toRem(50px);
-		justify-items: center;
-		align-items: center;
 	}
 }
 
 .certificate {
 	&_item {
-		cursor: pointer;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(abs.toRem(250px), 1fr));
+		grid-auto-rows: 1fr;
 		align-items: center;
+		gap: abs.toRem(20px);
 		@include abs.transitionAll;
 
-		&:hover {
-			transform: translate(-5px, -5px);
+		&:not(:last-child) {
+			margin-bottom: abs.toRem(20px);
 		}
 	}
 
 	&_info {
 		background-color: abs.$clr-mid-dark-blue;
 		padding: abs.toRem(20px) abs.toRem(30px);
-		border-radius: abs.toRem(5px);
+		border-radius: abs.toRem(4px);
 		z-index: 1;
-		width: abs.toRem(200px);
-		@include abs.center;
 		@include abs.boxShadow;
+
+		&--left {
+			text-align: right;
+		}
+
+		&--right {
+			text-align: left;
+		}
 
 		& h3 {
 			font-size: abs.toRem(20px);
 			color: abs.$clr-light-blue;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+			margin-bottom: abs.toRem(10px);
+		}
+
+		& p {
+			color: abs.$clr-light-blue;
+			font-size: abs.toRem(18px);
 		}
 
 		& span {
@@ -488,10 +493,9 @@ a:visited {
 	}
 
 	&_img {
-		width: abs.toRem(330px);
-		height: abs.toRem(250px);
+		// width: abs.toRem(450px);
+		// height: abs.toRem(350px);
 		border-radius: abs.toRem(5px);
-		margin-right: abs.toRem(-40px);
 	}
 }
 
@@ -503,6 +507,9 @@ a:visited {
 
 	&_container {
 		margin-top: abs.toRem(30px);
+		display: flex;
+		flex-direction: column;
+		gap: abs.toRem(150px);
 	}
 }
 
@@ -517,13 +524,21 @@ a:visited {
 		height: abs.toRem(310px);
 		border-radius: abs.toRem(4px);
 
-		&-link {
+		&-link--right {
 			margin-right: abs.toRem(-66px);
+		}
+
+		&-link--left {
+			margin-left: abs.toRem(-66px);
 		}
 	}
 
-	&_info {
+	&_info--right {
 		text-align: right;
+	}
+
+	&_info--left {
+		text-align: left;
 	}
 
 	&_tag {
@@ -559,6 +574,8 @@ a:visited {
 		line-height: abs.toRem(25px);
 		border-radius: abs.toRem(4px);
 		margin-bottom: abs.toRem(30px);
+		position: relative;
+		z-index: 2;
 
 		& a {
 			color: abs.$clr-very-light-green;
@@ -587,8 +604,15 @@ a:visited {
 		font-size: abs.toRem(14px);
 		font-family: abs.$ff-fira-code;
 		display: flex;
-		align-items: center;
-		justify-content: flex-end;
 		gap: abs.toRem(20px);
+		align-items: center;
+	}
+
+	&_tech--right {
+		justify-content: flex-end;
+	}
+
+	&_tech--left {
+		justify-content: flex-start;
 	}
 }

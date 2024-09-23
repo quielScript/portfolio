@@ -1,16 +1,33 @@
-function CertificateItem({ src, title, level, link }) {
+function CertificateItem({ src, title, level, link, description, type }) {
 	{
 		return (
-			<a href={link} target="_blank">
-				<div className="certificate_item certificate_item">
-					<img src={src} alt={src.split("-")[0]} className="certificate_img" />
-					<div className="certificate_info">
-						<h3>
-							<span>{title}&nbsp;</span>({level})
-						</h3>
-					</div>
-				</div>
-			</a>
+			<div className={`certificate_item certificate_item--${type}`}>
+				{type === "right" ? (
+					<>
+						<a href={link} target="_blank">
+							<img src={src} alt={title} className="certificate_img" />
+						</a>
+						<div className="certificate_info certificate_info--right">
+							<h3>
+								<span>{title}&nbsp;</span>({level})
+							</h3>
+							<p>{description}</p>
+						</div>
+					</>
+				) : (
+					<>
+						<div className="certificate_info certificate_info--left">
+							<h3>
+								<span>{title}&nbsp;</span>({level})
+							</h3>
+							<p>{description}</p>
+						</div>
+						<a href={link} target="_blank">
+							<img src={src} alt={title} className="certificate_img" />
+						</a>
+					</>
+				)}
+			</div>
 		);
 	}
 }

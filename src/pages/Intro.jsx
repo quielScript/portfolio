@@ -11,7 +11,9 @@ function Intro() {
 				</p>
 			</div>
 			<a href="#">
-				<button className="header_button">Contact me</button>
+				<a href="mailto:exequielarco23@gmail.com">
+					<button className="header_button">Contact me</button>
+				</a>
 			</a>
 		</header>
 	);
