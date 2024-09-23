@@ -1,8 +1,8 @@
 import PageIntro from "../components/PageIntro";
 
-function About() {
+function About({ aboutRef }) {
 	return (
-		<section className="about">
+		<section className="about" ref={aboutRef}>
 			<PageIntro num="01." title="About me" />
 			<div className="about_info-container">
 				<div className="about_info">

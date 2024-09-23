@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import EducDetails from "../components/EducDetails";
 
-function Education() {
+function Education({ educationRef }) {
 	const [activeBtn, setActiveBtn] = useState(null);
 	const btnRefs = useRef([]);
 	const typeOfEducation = activeBtn?.textContent
@@ -33,7 +33,7 @@ function Education() {
 	}
 
 	return (
-		<section className="education">
+		<section className="education" ref={educationRef}>
 			<PageIntro num="02." title="Education" />
 			<div className="education_info-container">
 				<ul className="education_list">

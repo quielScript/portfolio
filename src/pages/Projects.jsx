@@ -28,9 +28,9 @@ const projectsInfoObj = [
 	},
 ];
 
-function Projects() {
+function Projects({ projectsRef }) {
 	return (
-		<section className="projects">
+		<section className="projects" ref={projectsRef}>
 			<PageIntro num="05." title="Projects" />
 			<div className="projects_container">
 				<ProjectItem type="right" info={projectsInfoObj[0]} />

@@ -1,8 +1,8 @@
 import PageIntro from "../components/PageIntro";
 
-function Experience() {
+function Experience({ experienceRef }) {
 	return (
-		<section className="experience">
+		<section className="experience" ref={experienceRef}>
 			<PageIntro num="03." title="Experience" />
 			<div className="experience_container">
 				<div className="experience_list-container">

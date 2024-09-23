@@ -40,9 +40,9 @@ const certInfoObj = [
 	},
 ];
 
-function Certifications() {
+function Certifications({ certificationsRef }) {
 	return (
-		<section className="certifications">
+		<section className="certifications" ref={certificationsRef}>
 			<PageIntro num="04." title="Certifications" />
 			<div className="certifications_container">
 				{certInfoObj.map((item, i) => (
