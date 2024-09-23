@@ -3,17 +3,26 @@ function ProjectItem({ type, info }) {
 
 	return type === "right" ? (
 		<div className="project_item">
-			<a href={link} className="project_img-link project_img-link--right">
+			<a
+				href={link}
+				target="_blank"
+				className="project_img-link project_img-link--right"
+			>
 				<img src={img} alt={name} className="project_img" />
 			</a>
 			<div className="project_info--right">
 				<p className="project_tag">Featured Project</p>
 				<h3 className="project_title">
-					<a href={link}>{name}</a>
+					<a href={link} target="_blank">
+						{name}
+					</a>
 				</h3>
 				<div className="project_description-container">
 					<p className="project_description">
-						<a href={link}>{name}</a>&nbsp;{description}
+						<a href={link} target="_blank">
+							{name}
+						</a>
+						&nbsp;{description}
 					</p>
 				</div>
 				<ul className="project_tech project_tech--right">
@@ -28,11 +37,16 @@ function ProjectItem({ type, info }) {
 			<div className="project_info--left">
 				<p className="project_tag">Featured Project</p>
 				<h3 className="project_title">
-					<a href={link}>{name}</a>
+					<a href={link} target="_blank">
+						{name}
+					</a>
 				</h3>
 				<div className="project_description-container">
 					<p className="project_description">
-						<a href={link}>{name}</a>&nbsp;{description}
+						<a href={link} target="_blank">
+							{name}
+						</a>
+						&nbsp;{description}
 					</p>
 				</div>
 				<ul className="project_tech project_tech--left">
@@ -41,7 +55,11 @@ function ProjectItem({ type, info }) {
 					))}
 				</ul>
 			</div>
-			<a href={link} className="project_img-link project_img-link--left">
+			<a
+				href={link}
+				target="_blank"
+				className="project_img-link project_img-link--left"
+			>
 				<img src={img} alt={name} className="project_img" />
 			</a>
 		</div>
