@@ -10,11 +10,14 @@ function Intro() {
 					beautiful and user-friendly web applications.
 				</p>
 			</div>
-			<a href="#">
+			<div className="header_button-container">
 				<a href="mailto:exequielarco23@gmail.com">
 					<button className="header_button">Contact me</button>
 				</a>
-			</a>
+				<a href="#">
+					<button className="header_button">View Resume</button>
+				</a>
+			</div>
 		</header>
 	);
 }

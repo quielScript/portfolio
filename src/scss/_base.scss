@@ -108,6 +108,13 @@ a:visited {
 		margin-bottom: abs.toRem(50px);
 	}
 
+	&_button-container {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: abs.toRem(15px);
+	}
+
 	&_button {
 		cursor: pointer;
 		outline: none;
