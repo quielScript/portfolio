@@ -32,11 +32,27 @@ a:visited {
 // NAVIGATION
 .navigation {
 	height: abs.toRem(100px);
-	background-color: abs.$clr-very-dark-blue;
+	background-color: rgba(10, 25, 47, 0.7);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 abs.toRem(50px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+
+	@include abs.transitionAll;
+
+	&.hidden {
+		transform: translateY(-100%);
+	}
+
+	&.visible {
+		transform: translateY(0);
+		backdrop-filter: blur(10px);
+	}
 
 	&_logo:link,
 	&_logo:visited {
@@ -76,7 +92,7 @@ a:visited {
 .header {
 	max-width: abs.toRem(1000px);
 	margin: 0 auto;
-	padding: abs.toRem(50px) 0;
+	padding: abs.toRem(150px) 0 abs.toRem(100px) 0;
 
 	&_primary {
 		font-size: abs.toRem(16px);
@@ -164,7 +180,7 @@ a:visited {
 .about {
 	max-width: abs.toRem(1000px);
 	margin: 0 auto;
-	padding: abs.toRem(250px) 0;
+	padding: abs.toRem(150px) 0 abs.toRem(250px) 0;
 
 	&_info-container {
 		margin-top: abs.toRem(30px);
