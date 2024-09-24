@@ -1,5 +1,6 @@
 import PageIntro from "../components/PageIntro";
 import ProjectItem from "../components/ProjectItem";
+import Reveal from "../utils/Reveal";
 
 const projectsInfoObj = [
 	{
@@ -40,12 +41,22 @@ const projectsInfoObj = [
 function Projects({ projectsRef }) {
 	return (
 		<section className="projects" ref={projectsRef}>
-			<PageIntro num="05." title="Projects" />
+			<Reveal>
+				<PageIntro num="05." title="Projects" />
+			</Reveal>
 			<div className="projects_container">
-				<ProjectItem type="right" info={projectsInfoObj[0]} />
-				<ProjectItem type="left" info={projectsInfoObj[1]} />
-				<ProjectItem type="right" info={projectsInfoObj[2]} />
-				<ProjectItem type="left" info={projectsInfoObj[3]} />
+				<Reveal>
+					<ProjectItem type="right" info={projectsInfoObj[0]} />
+				</Reveal>
+				<Reveal>
+					<ProjectItem type="left" info={projectsInfoObj[1]} />
+				</Reveal>
+				<Reveal>
+					<ProjectItem type="right" info={projectsInfoObj[2]} />
+				</Reveal>
+				<Reveal>
+					<ProjectItem type="left" info={projectsInfoObj[3]} />
+				</Reveal>
 			</div>
 		</section>
 	);

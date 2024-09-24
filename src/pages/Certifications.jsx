@@ -1,5 +1,6 @@
 import CertificateItem from "../components/CertificateItem";
 import PageIntro from "../components/PageIntro";
+import Reveal from "../utils/Reveal";
 
 const certInfoObj = [
 	{
@@ -43,18 +44,22 @@ const certInfoObj = [
 function Certifications({ certificationsRef }) {
 	return (
 		<section className="certifications" ref={certificationsRef}>
-			<PageIntro num="04." title="Certifications" />
+			<Reveal>
+				<PageIntro num="04." title="Certifications" />
+			</Reveal>
 			<div className="certifications_container">
 				{certInfoObj.map((item, i) => (
-					<CertificateItem
-						title={item.title}
-						level={item.level}
-						description={item.description}
-						type={item.type}
-						src={item.src}
-						link={item.link}
-						key={i + 1}
-					/>
+					<Reveal key={i + 1}>
+						<CertificateItem
+							title={item.title}
+							level={item.level}
+							description={item.description}
+							type={item.type}
+							src={item.src}
+							link={item.link}
+							key={i + 1}
+						/>
+					</Reveal>
 				))}
 			</div>
 		</section>

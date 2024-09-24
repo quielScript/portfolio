@@ -30,6 +30,18 @@ $fw-xlarge: 800;
 	justify-content: center;
 }
 
+@mixin flexColLeft {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+@mixin flexColRight {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
 @mixin transitionAll {
 	transition: all 0.3s;
 }

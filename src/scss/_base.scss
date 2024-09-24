@@ -24,6 +24,14 @@ svg {
 	max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+p,
+a {
+	width: fit-content;
+}
+
 a:link,
 a:visited {
 	text-decoration: none;
@@ -418,8 +426,13 @@ a:visited {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		text-align: right;
+		align-items: end;
 		padding-right: abs.toRem(50px);
+
+		& li {
+			text-align: right;
+			@include abs.flexColLeft;
+		}
 	}
 
 	&_list-mid {
@@ -454,8 +467,13 @@ a:visited {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		text-align: left;
+		align-items: start;
 		padding-left: abs.toRem(50px);
+
+		& li {
+			text-align: left;
+			@include abs.flexColRight;
+		}
 	}
 }
 
@@ -493,10 +511,12 @@ a:visited {
 
 		&--left {
 			text-align: right;
+			@include abs.flexColLeft;
 		}
 
 		&--right {
 			text-align: left;
+			@include abs.flexColRight;
 		}
 
 		& h3 {
@@ -556,10 +576,12 @@ a:visited {
 
 	&_info--right {
 		text-align: right;
+		@include abs.flexColLeft;
 	}
 
 	&_info--left {
 		text-align: left;
+		@include abs.flexColRight;
 	}
 
 	&_tag {

@@ -3,6 +3,7 @@ import PageIntro from "../components/PageIntro";
 import { useRef } from "react";
 import { useEffect } from "react";
 import EducDetails from "../components/EducDetails";
+import Reveal from "../utils/Reveal";
 
 function Education({ educationRef }) {
 	const [activeBtn, setActiveBtn] = useState(null);
@@ -34,47 +35,59 @@ function Education({ educationRef }) {
 
 	return (
 		<section className="education" ref={educationRef}>
-			<PageIntro num="02." title="Education" />
+			<Reveal>
+				<PageIntro num="02." title="Education" />
+			</Reveal>
 			<div className="education_info-container">
 				<ul className="education_list">
-					<li className="education_item">
-						<button
-							className="education_button btn--active"
-							onClick={handleActiveBtn}
-							ref={(el) => (btnRefs.current[0] = el)}
-						>
-							COLLEGE
-						</button>
-					</li>
-					<li>
-						<button
-							className="education_button"
-							onClick={handleActiveBtn}
-							ref={(el) => (btnRefs.current[1] = el)}
-						>
-							S.H.S
-						</button>
-					</li>
-					<li>
-						<button
-							className="education_button"
-							onClick={handleActiveBtn}
-							ref={(el) => (btnRefs.current[2] = el)}
-						>
-							J.H.S
-						</button>
-					</li>
-					<li>
-						<button
-							className="education_button"
-							onClick={handleActiveBtn}
-							ref={(el) => (btnRefs.current[3] = el)}
-						>
-							ELEMENTARY
-						</button>
-					</li>
+					<Reveal>
+						<li className="education_item">
+							<button
+								className="education_button btn--active"
+								onClick={handleActiveBtn}
+								ref={(el) => (btnRefs.current[0] = el)}
+							>
+								COLLEGE
+							</button>
+						</li>
+					</Reveal>
+					<Reveal>
+						<li>
+							<button
+								className="education_button"
+								onClick={handleActiveBtn}
+								ref={(el) => (btnRefs.current[1] = el)}
+							>
+								S.H.S
+							</button>
+						</li>
+					</Reveal>
+					<Reveal>
+						<li>
+							<button
+								className="education_button"
+								onClick={handleActiveBtn}
+								ref={(el) => (btnRefs.current[2] = el)}
+							>
+								J.H.S
+							</button>
+						</li>
+					</Reveal>
+					<Reveal>
+						<li>
+							<button
+								className="education_button"
+								onClick={handleActiveBtn}
+								ref={(el) => (btnRefs.current[3] = el)}
+							>
+								ELEMENTARY
+							</button>
+						</li>
+					</Reveal>
 				</ul>
-				<EducDetails typeOfEducation={typeOfEducation} />
+				<Reveal>
+					<EducDetails typeOfEducation={typeOfEducation} />
+				</Reveal>
 			</div>
 		</section>
 	);
