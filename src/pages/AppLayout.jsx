@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Navigation from "../components/Navigation";
 import About from "./About";
 import Education from "./Education";
@@ -5,7 +6,7 @@ import Intro from "./Intro";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
 import Projects from "./Projects";
-import { useRef } from "react";
+import Contact from "./Contact";
 
 function AppLayout() {
 	const introRef = useRef(null);
@@ -47,6 +48,7 @@ function AppLayout() {
 			<Experience experienceRef={experienceRef} />
 			<Certifications certificationsRef={certificationsRef} />
 			<Projects projectsRef={projectsRef} />
+			<Contact />
 		</>
 	);
 }
