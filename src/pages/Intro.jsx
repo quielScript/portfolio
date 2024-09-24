@@ -1,4 +1,5 @@
 import Reveal from "../utils/Reveal";
+import RevealUp from "../utils/RevealUp";
 
 function Intro() {
 	return (
@@ -21,16 +22,16 @@ function Intro() {
 				</Reveal>
 			</div>
 			<div className="header_button-container">
-				<Reveal>
+				<RevealUp>
 					<a href="mailto:exequielarco23@gmail.com">
 						<button className="header_button">Contact me</button>
 					</a>
-				</Reveal>
-				<Reveal>
+				</RevealUp>
+				<RevealUp>
 					<a href="#">
 						<button className="header_button">View Resume</button>
 					</a>
-				</Reveal>
+				</RevealUp>
 			</div>
 		</header>
 	);

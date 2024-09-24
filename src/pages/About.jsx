@@ -1,6 +1,58 @@
 import PageIntro from "../components/PageIntro";
 import Reveal from "../utils/Reveal";
 
+const techInfoObj = [
+	{
+		name: "HTML",
+		src: "./assets-for-portfolio/technologies-tools/HTML.png",
+	},
+	{
+		name: "CSS",
+		src: "./assets-for-portfolio/technologies-tools/CSS.png",
+	},
+	{
+		name: "JavaScript",
+		src: "./assets-for-portfolio/technologies-tools/JavaScript.png",
+	},
+	{
+		name: "React",
+		src: "./assets-for-portfolio/technologies-tools/React-Dark.png",
+	},
+	{
+		name: "Sass",
+		src: "./assets-for-portfolio/technologies-tools/Sass.png",
+	},
+
+	{
+		name: "Git",
+		src: "./assets-for-portfolio/technologies-tools/Git.png",
+	},
+	{
+		name: "GitHub",
+		src: "./assets-for-portfolio/technologies-tools/Github-Dark.png",
+	},
+	{
+		name: "Figma",
+		src: "./assets-for-portfolio/technologies-tools/Figma-Dark.png",
+	},
+	{
+		name: "NPM",
+		src: "./assets-for-portfolio/technologies-tools/Npm-Dark.png",
+	},
+	{
+		name: "VSCode",
+		src: "./assets-for-portfolio/technologies-tools/VSCode-Dark.png",
+	},
+	{
+		name: "Netlify",
+		src: "./assets-for-portfolio/technologies-tools/Netlify-Dark.png",
+	},
+	{
+		name: "Vite",
+		src: "./assets-for-portfolio/technologies-tools/Vite-Dark.png",
+	},
+];
+
 function About({ aboutRef }) {
 	return (
 		<section className="about" ref={aboutRef}>
@@ -36,95 +88,19 @@ function About({ aboutRef }) {
 						</Reveal>
 					</div>
 					<div className="about_tech-container">
-						<Reveal>
-							<ul className="about_tech-list">
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/HTML.png"
-										alt="HTML"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/CSS.png"
-										alt="CSS"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/JavaScript.png"
-										alt="JavaScript"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/React-Dark.png"
-										alt="React"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Sass.png"
-										alt="Sass"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Git.png"
-										alt="Git"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Github-Dark.png"
-										alt="Github"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Figma-Dark.png"
-										alt="Figma"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Npm-Dark.png"
-										alt="NPM"
-										className="about_tech-item-logo"
-									/>
-								</li>
-
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/VSCode-Dark.png"
-										alt="VSCode"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Netlify-Dark.png"
-										alt="Netlify"
-										className="about_tech-item-logo"
-									/>
-								</li>
-								<li className="about_tech-item">
-									<img
-										src="./assets-for-portfolio/technologies-tools/Vite-Dark.png"
-										alt="Vite"
-										className="about_tech-item-logo"
-									/>
-								</li>
-							</ul>
-						</Reveal>
+						<ul className="about_tech-list">
+							{techInfoObj.map((item, i) => (
+								<Reveal key={i + 1}>
+									<li className="about_tech-item">
+										<img
+											src={item.src}
+											alt={item.name}
+											className="about_tech-item-logo"
+										/>
+									</li>
+								</Reveal>
+							))}
+						</ul>
 					</div>
 				</div>
 				<div className="about_avatar-container">
