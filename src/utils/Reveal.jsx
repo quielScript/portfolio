@@ -1,6 +1,6 @@
 // CREDITS: https://www.youtube.com/watch?v=hjbxaYTMhy0
 
-import { motion, useInView, useAnimation, useAnimate } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 function Reveal({ children }) {
@@ -8,17 +8,17 @@ function Reveal({ children }) {
 	const isInView = useInView(ref, { once: true });
 
 	const mainControls = useAnimation();
-	// const slideControls = useAnimate();
+	const slideControls = useAnimation();
 
 	useEffect(
 		function () {
 			if (isInView) {
 				// Fire the animation
 				mainControls.start("visible");
-				// slideControls.start("visible");
+				slideControls.start("visible");
 			}
 		},
-		[isInView, mainControls]
+		[isInView, mainControls, slideControls]
 	);
 
 	return (
@@ -43,7 +43,7 @@ function Reveal({ children }) {
 			>
 				{children}
 			</motion.div>
-			{/* <motion.div
+			<motion.div
 				variants={{
 					hidden: { left: 0 },
 					visible: { left: "100%" },
@@ -60,7 +60,7 @@ function Reveal({ children }) {
 					background: "#64ffda",
 					zIndex: 20,
 				}}
-			/> */}
+			/>
 		</div>
 	);
 }
