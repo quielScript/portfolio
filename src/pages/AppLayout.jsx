@@ -8,6 +8,7 @@ import Certifications from "./Certifications";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Preloader from "../components/Preloader";
+import Footer from "./Footer";
 
 function AppLayout() {
 	const [loading, setIsloading] = useState(true);
@@ -17,6 +18,7 @@ function AppLayout() {
 	const experienceRef = useRef(null);
 	const certificationsRef = useRef(null);
 	const projectsRef = useRef(null);
+	const contactRef = useRef(null);
 
 	// For preloader
 	useEffect(function () {
@@ -54,6 +56,7 @@ function AppLayout() {
 						experienceRef={experienceRef}
 						certificationsRef={certificationsRef}
 						projectsRef={projectsRef}
+						contactRef={contactRef}
 						handleScrollToTop={scrollToTop}
 						handleScrollToSection={scrollToSection}
 					/>
@@ -63,7 +66,8 @@ function AppLayout() {
 					<Experience experienceRef={experienceRef} />
 					<Certifications certificationsRef={certificationsRef} />
 					<Projects projectsRef={projectsRef} />
-					<Contact />
+					<Contact contactRef={contactRef} />
+					<Footer />
 				</>
 			)}
 		</>

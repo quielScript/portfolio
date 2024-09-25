@@ -6,6 +6,7 @@ function Navigation({
 	experienceRef,
 	certificationsRef,
 	projectsRef,
+	contactRef,
 	handleScrollToTop,
 	handleScrollToSection,
 }) {
@@ -115,6 +116,17 @@ function Navigation({
 				>
 					<a href="#">
 						<span>05.</span>Projects
+					</a>
+				</li>
+				<li
+					className="navigation_item"
+					onClick={(e) => {
+						e.preventDefault();
+						handleScrollToSection(contactRef);
+					}}
+				>
+					<a href="#">
+						<span>06.</span>Contacts
 					</a>
 				</li>
 			</ul>

@@ -33,8 +33,11 @@ function Experience({ experienceRef }) {
 						<Reveal>
 							<li>
 								<p className="experience_description">
-									I am currently studying advance level of ReactJS and exploring
-									backend technologies through online courses.
+									Worked with other Front-end Web Developers internationally on
+									activity projects from online courses, developed dynamic and
+									interactive websites from Frontend Mentor challenges, and
+									experienced working with APIs and developing responsive
+									applications.
 								</p>
 							</li>
 						</Reveal>

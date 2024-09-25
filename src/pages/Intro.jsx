@@ -9,7 +9,9 @@ function Intro() {
 					<h1 className="header_primary">Hello, my name is</h1>
 				</Reveal>
 				<Reveal>
-					<h2 className="header_secondary">Exequiel Arco.</h2>
+					<h2 className="header_secondary">
+						Exequiel Arco<span>.</span>
+					</h2>
 				</Reveal>
 				<Reveal>
 					<h3 className="header_tertiary">I craft things for the web.</h3>

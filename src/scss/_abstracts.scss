@@ -24,6 +24,32 @@ $fw-large: 700;
 $fw-xlarge: 800;
 
 // MIXIN
+@mixin anchorHover {
+	color: $clr-very-light-green;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		height: 1px;
+		background-color: $clr-very-light-green;
+		transition: width 0.5s ease;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+@mixin sectionSize {
+	max-width: toRem(1000px);
+	margin: 0 auto;
+	padding: toRem(150px) 0 toRem(100px) 0;
+}
+
 @mixin center {
 	display: flex;
 	align-items: center;
