@@ -30,7 +30,7 @@ function Intro() {
 					</a>
 				</RevealUp>
 				<RevealUp>
-					<a href="#">
+					<a href="https://drive.google.com/file/d/1cBKvFYIu6WduT8LX5eH4MVRw2VaBJFnJ/view?usp=drive_link">
 						<button className="header_button">View Resume</button>
 					</a>
 				</RevealUp>
