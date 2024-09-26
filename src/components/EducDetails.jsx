@@ -1,4 +1,4 @@
-import EducDetailsItem from "./EducDetailsitem";
+import EducDetailsItem from "./EducDetailsItem";
 
 const educationInfoObj = [
 	{
