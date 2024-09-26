@@ -1,5 +1,5 @@
 function ProjectItem({ type, info }) {
-	const { name, description, link, img, tech } = info;
+	const { name, description, link, repository, img, tech } = info;
 
 	return type === "right" ? (
 		<div className="project_item">
@@ -30,6 +30,16 @@ function ProjectItem({ type, info }) {
 						<li key={i}>{tech}</li>
 					))}
 				</ul>
+				<ul className="project_links project_links--right">
+					<li>
+						<a href={repository} target="_blank">
+							View Code
+						</a>
+					</li>
+					<li>
+						<a href="#">View Site</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	) : (
@@ -53,6 +63,16 @@ function ProjectItem({ type, info }) {
 					{tech.map((tech, i) => (
 						<li key={i}>{tech}</li>
 					))}
+				</ul>
+				<ul className="project_links project_links--left">
+					<li>
+						<a href={repository} target="_blank">
+							View Code
+						</a>
+					</li>
+					<li>
+						<a href="#">View Site</a>
+					</li>
 				</ul>
 			</div>
 			<a

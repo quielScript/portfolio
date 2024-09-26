@@ -3,7 +3,7 @@ function Footer() {
 		<footer className="footer">
 			<div>
 				<p>
-					Design inspitation from&nbsp;
+					Design inspiration from&nbsp;
 					<a href="https://www.linkedin.com/in/bchiang7/" target="_blank">
 						Britanny Chiang
 					</a>

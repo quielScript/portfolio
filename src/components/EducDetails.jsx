@@ -16,7 +16,7 @@ const educationInfoObj = [
 		school: "Andres Soriano Colleges of Bislig",
 		time: "Aug 2021 - May 2023",
 		info: [
-			"Studied Science, Technology, Enginnering, and Mathematics (STEM).",
+			"Studied Science, Technology, Enginnering, and Mathematics (STEM)",
 			"Graduated with honors",
 			"Participated in various science and engineering competitions",
 			"Learned foundational programming",

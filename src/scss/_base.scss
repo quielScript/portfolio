@@ -13,6 +13,16 @@ html {
 	scrollbar-color: #495670 abs.$clr-very-dark-blue;
 }
 
+::-moz-selection {
+	color: abs.$clr-light-blue;
+	background: abs.$clr-very-light-green;
+}
+
+::selection {
+	color: abs.$clr-very-dark-blue;
+	background: abs.$clr-very-light-green;
+}
+
 body {
 	font-family: abs.$ff-inter;
 	background-color: abs.$clr-very-dark-blue;
@@ -621,11 +631,35 @@ a:visited {
 		align-items: center;
 	}
 
-	&_tech--right {
+	&_links,
+	&_tech {
+		list-style: none;
+		font-size: abs.toRem(14px);
+		font-family: abs.$ff-fira-code;
+		display: flex;
+		gap: abs.toRem(20px);
+		align-items: center;
+	}
+
+	&_tech {
+		color: abs.$clr-light-blue;
+		margin-bottom: abs.toRem(10px);
+	}
+
+	&_links a:link,
+	&_links a:visited {
+		color: abs.$clr-very-light-green;
+
+		@include abs.anchorHover;
+	}
+
+	&_tech--right,
+	&_links--right {
 		justify-content: flex-end;
 	}
 
-	&_tech--left {
+	&_tech--left,
+	&_links--left {
 		justify-content: flex-start;
 	}
 }
