@@ -37,7 +37,9 @@ function ProjectItem({ type, info }) {
 						</a>
 					</li>
 					<li>
-						<a href="#">View Site</a>
+						<a href={link} target="_blank">
+							View Site
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -71,7 +73,9 @@ function ProjectItem({ type, info }) {
 						</a>
 					</li>
 					<li>
-						<a href="#">View Site</a>
+						<a href={link} target="_blank">
+							View Site
+						</a>
 					</li>
 				</ul>
 			</div>

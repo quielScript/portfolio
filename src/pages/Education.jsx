@@ -1,7 +1,5 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import PageIntro from "../components/PageIntro";
-import { useRef } from "react";
-import { useEffect } from "react";
 import EducDetails from "../components/EducDetails";
 import Reveal from "../utils/Reveal";
 

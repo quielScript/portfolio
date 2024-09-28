@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Navigation from "../components/Navigation";
+import Preloader from "../components/Preloader";
+import Intro from "./Intro";
 import About from "./About";
 import Education from "./Education";
-import Intro from "./Intro";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Preloader from "../components/Preloader";
 import Footer from "./Footer";
 
 function AppLayout() {
