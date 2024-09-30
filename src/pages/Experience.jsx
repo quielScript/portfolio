@@ -44,7 +44,7 @@ function Experience({ experienceRef }) {
 						<Reveal>
 							<li>
 								<h3>Visual Basic (VB.net) Feelancer</h3>
-								<p className="experience_time">April - May 2023</p>
+								<p className="experience_time">April 2023 - May 2023</p>
 							</li>
 						</Reveal>
 					</ul>

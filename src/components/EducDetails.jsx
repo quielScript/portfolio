@@ -17,23 +17,30 @@ const educationInfoObj = [
 		time: "Aug 2021 - May 2023",
 		info: [
 			"Studied Science, Technology, Enginnering, and Mathematics (STEM)",
-			"Graduated with honors",
 			"Participated in various science and engineering competitions",
 			"Learned foundational programming",
 			"Student Council member",
+			"Graduated with honors",
 		],
 	},
 	{
 		level: "jhs",
 		school: "Andres Soriano Colleges of Bislig",
 		time: "June 2017 - May 2021",
-		info: ["Learned the basics of computer", "Graduated with honors"],
+		info: [
+			"Learned the basics of computer",
+			"Learned fast typing in keyboard",
+			"Graduated with honors",
+		],
 	},
 	{
 		level: "elementary",
 		school: "Mangagoy South Elementary School",
 		time: "June 2011 - April 2017",
-		info: ["Contributed to the school's community services"],
+		info: [
+			"Contributed to the school's community services",
+			"Member of the Boy Scouts of the Philippines and joined a Jamboree, where I took part in activities with scouts from different cities.",
+		],
 	},
 ];
 
