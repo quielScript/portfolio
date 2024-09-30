@@ -39,7 +39,7 @@ const educationInfoObj = [
 		time: "June 2011 - April 2017",
 		info: [
 			"Contributed to the school's community services",
-			"Member of the Boy Scouts of the Philippines and joined a Jamboree, where I took part in activities with scouts from different cities.",
+			"Member of the Boy Scouts of the Philippines and joined a Jamboree, where I took part in activities with scouts from different cities",
 		],
 	},
 ];
