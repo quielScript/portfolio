@@ -61,12 +61,14 @@ function AppLayout() {
 						handleScrollToSection={scrollToSection}
 					/>
 					<Intro />
-					<About aboutRef={aboutRef} />
-					<Education educationRef={educationRef} />
-					<Experience experienceRef={experienceRef} />
-					<Certifications certificationsRef={certificationsRef} />
-					<Projects projectsRef={projectsRef} />
-					<Contact contactRef={contactRef} />
+					<main>
+						<About aboutRef={aboutRef} />
+						<Education educationRef={educationRef} />
+						<Experience experienceRef={experienceRef} />
+						<Certifications certificationsRef={certificationsRef} />
+						<Projects projectsRef={projectsRef} />
+						<Contact contactRef={contactRef} />
+					</main>
 					<Footer />
 				</>
 			)}
