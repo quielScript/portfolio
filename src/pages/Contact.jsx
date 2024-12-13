@@ -53,7 +53,7 @@ function Contact({ contactRef }) {
 					<ul>
 						<Reveal>
 							<li>
-								<a href="https://github.com/quielLovesLasagna/" target="_blank">
+								<a href="https://github.com/quielScript" target="_blank">
 									GitHub
 								</a>
 							</li>
